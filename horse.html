@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Horse</title>
+    <style>
+        /* Full viewport background styling */
+        body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            background-image: url("http://s18.postimg.io/49u99igkp/field_008.jpg");
+            background-size: cover;
+            background-repeat: repeat-x;
+            overflow: hidden;
+        }
+
+        /* Style for the horse image */
+        img {
+            width: 40vw; /* Set a responsive width */
+            max-width: 300px; /* Limit max size on larger screens */
+            animation: runningHorse 10s linear infinite; /* Automatic animation */
+        }
+
+        /* Keyframes for the running animation */
+        @keyframes runningHorse {
+            0% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(75vw) rotateY(70deg) scale(0.6);
+            }
+            55% {
+                transform: translateX(80vw) rotateY(180deg) scale(0.7);
+            }
+            100% {
+                transform: translateX(0) rotateY(160deg) scale(0.8);
+            }
+        }
+
+        /* Larger image for smaller screens */
+        @media (max-width: 768px) {
+            img {
+                width: 60vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="http://cliparts.co/cliparts/8Tz/Byj/8TzByjyTp.gif" alt="Running Horse">
+    
+    <!-- First audio track -->
+    <audio autoplay loop>
+        <source src="first.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Second audio track -->
+    <audio autoplay loop>
+        <source src="second.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+  </html>
